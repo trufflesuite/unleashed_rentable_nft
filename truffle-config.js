@@ -20,8 +20,7 @@
 
 // const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+require('dotenv').config();
 
 module.exports = {
   /**
@@ -41,11 +40,11 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 7545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
-    },
+    // development: {
+    //  host: "127.0.0.1",     // Localhost (default: none)
+    //  port: 7545,            // Standard Ethereum port (default: none)
+    //  network_id: "*",       // Any network (default: none)
+    // }
     //
     // An additional network, but with some advanced options…
     // advanced: {
@@ -95,25 +94,8 @@ module.exports = {
       // }
     }
   },
-
-  // Truffle DB is currently disabled by default; to enable it, change enabled:
-  // false to enabled: true. The default storage location can also be
-  // overridden by specifying the adapter settings, as shown in the commented code below.
-  //
-  // NOTE: It is not possible to migrate your contracts to truffle DB and you should
-  // make a backup of your artifacts to a safe location before enabling this feature.
-  //
-  // After you backed up your artifacts you can utilize db by running migrate as follows:
-  // $ truffle migrate --reset --compile-all
-  //
-  // db: {
-  //   enabled: false,
-  //   host: "127.0.0.1",
-  //   adapter: {
-  //     name: "sqlite",
-  //     settings: {
-  //       directory: ".db"
-  //     }
-  //   }
-  // }
+  plugins: ['truffle-plugin-verify'],
+  api_keys: {
+    etherscan: process.env["ETHERSCAN_API_KEY"]
+  }
 };

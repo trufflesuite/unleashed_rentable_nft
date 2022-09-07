@@ -1,0 +1,62 @@
+{
+  "_from": "@openzeppelin/contracts",
+  "_id": "@openzeppelin/contracts@4.7.3",
+  "_inBundle": false,
+  "_integrity": "sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==",
+  "_location": "/@openzeppelin/contracts",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@openzeppelin/contracts",
+    "name": "@openzeppelin/contracts",
+    "escapedName": "@openzeppelin%2fcontracts",
+    "scope": "@openzeppelin",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@openzeppelin/contracts/-/contracts-4.7.3.tgz",
+  "_shasum": "939534757a81f8d69cc854c7692805684ff3111e",
+  "_spec": "@openzeppelin/contracts",
+  "_where": "/Users/emilylin/dev/unleashed_rentable_nft",
+  "author": {
+    "name": "OpenZeppelin Community",
+    "email": "maintainers@openzeppelin.org"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Secure Smart Contract library for Solidity",
+  "files": [
+    "**/*.sol",
+    "/build/contracts/*.json",
+    "!/mocks/**/*"
+  ],
+  "homepage": "https://openzeppelin.com/contracts/",
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "security",
+    "zeppelin"
+  ],
+  "license": "MIT",
+  "name": "@openzeppelin/contracts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenZeppelin/openzeppelin-contracts.git"
+  },
+  "scripts": {
+    "prepare": "bash ../scripts/prepare-contracts-package.sh",
+    "prepare-docs": "cd ..; npm run prepare-docs"
+  },
+  "version": "4.7.3"
+}
