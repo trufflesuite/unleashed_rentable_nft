@@ -25,7 +25,7 @@ contract("RentablePets", function (accounts) {
     // Failed require in function
     await expectRevert(rentablePetsInstance.setUser(1, accounts[1], expirationDatePast, {from: accounts[1]}), "ERC721: transfer caller is not owner nor approved");
     // Assert no UserInfo for NFT
-    var user = await rentablePetsInstance.userOf.call(1);
+    var user = await debug(rentablePetsInstance.userOf.call(1));
     var date = await rentablePetsInstance.userExpires.call(1);
     assert.equal(user, constants.ZERO_ADDRESS, "NFT user is not zero address");
     assert.equal(date, 0, "NFT expiration date is not 0");
